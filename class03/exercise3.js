@@ -48,5 +48,5 @@
 
   console.log(message.toUpperCase()); // JAVASCRIPT ITU SERU!
   console.log(message.slice(-5)); // seru!
-  console.log(message.length); // 22
+  console.log(message.length); // 20
 }

@@ -43,3 +43,22 @@
 
   console.log(factorial(5)); // Output: 120
 }
+
+//3. third question
+{
+  function outer() {
+    let message = 'Hello';
+
+    function inner() {
+      console.log(message);
+    }
+
+    return inner;
+  }
+
+  let sayHello = outer();
+  sayHello();
+
+  // Jelaskan mengapa fungsi `inner()` tetap bisa mengakses variabel `message`, meskipun `outer()` sudah selesai dieksekusi.
+  //because inner() is a closure, it retain the access to the lexical environment (where the message variable exist) even after the outer() has executed. when sayHello() is called, the javascript look up the message through the scope of chain to find the variable stored in the chain.
+}

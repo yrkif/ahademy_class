@@ -62,3 +62,38 @@
   // Jelaskan mengapa fungsi `inner()` tetap bisa mengakses variabel `message`, meskipun `outer()` sudah selesai dieksekusi.
   //because inner() is a closure, it retain the access to the lexical environment (where the message variable exist) even after the outer() has executed. when sayHello() is called, the javascript look up the message through the scope of chain to find the variable stored in the chain.
 }
+
+//4. fourth question
+{
+  // Di JavaScript, fungsi juga merupakan objek. Berdasarkan konsep ini, ubahlah fungsi berikut agar memiliki properti description yang berisi teks "Ini adalah fungsi penjumlahan"
+
+  function add(a, b) {
+    return a + b;
+  }
+
+  // Tambahkan properti di sini
+  add.description = 'Ini adalah fungsi penjumlahan';
+
+  console.log(add.description); // Output: "Ini adalah fungsi penjumlahan"
+}
+
+//5. fifth question
+{
+  //Apa output dari kode berikut, dan jelaskan alasannya?
+
+  let count = 0;
+
+  let interval = setInterval(() => {
+    console.log(`Hitungan: ${++count}`);
+    if (count === 3) clearInterval(interval);
+  }, 1000);
+
+  setTimeout(() => {
+    console.log('Selesai!');
+  }, 4000);
+
+  //1
+  //2
+  //3
+  //'Selesai!'
+}

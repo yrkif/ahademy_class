@@ -35,4 +35,4 @@
   console.log(worker.slow(2)); // Error: Cannot read property 'someMethod' of undefined
 }
 
-// line (**) is not calling worker.slow(x), but func(x). since func(x) is not an object, it will resulting undefined. to fix this, use .call(this,x) to use the original function.
+// line (**) is not calling worker.slow(x), but func(x). since func(x) is not an object, it will resulting undefined. to fix this, use .call(this,x) to use the original function (worker.slow).

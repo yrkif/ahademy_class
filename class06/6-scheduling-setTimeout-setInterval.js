@@ -25,9 +25,10 @@
 
 {
   //2. nested setTimeout
+  // the result is quite wrong, print double tick in the second call
 
   let timerId = setTimeout(function tick() {
     console.log('tick');
     setTimeout(tick, 2000);
-  }, 2000);
+  }, 1000);
 }

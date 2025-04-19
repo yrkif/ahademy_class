@@ -17,12 +17,12 @@
 
 {
   function makeCounter() {
-    function counter() {
-      return counter.count++;
+    function increment() {
+      return increment.count++;
     }
 
-    counter.count = 0;
-    return counter;
+    increment.count = 0;
+    return increment;
   }
 
   let counter = makeCounter();

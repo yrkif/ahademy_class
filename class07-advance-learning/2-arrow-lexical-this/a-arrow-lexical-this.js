@@ -28,10 +28,13 @@
 
     showList() {
       this.students.forEach(
-        (student) => console.log(this.title + ': ' + student) // arrow function will using its outer lexical environment (group)
+        (student) => console.log(this.title + ': ' + student) // arrow function will using its outer lexical environment, so the "this" is owned by showList() function, not forEach function. thus "this" will have its access to the group={...} which showList() is a method of the object.
       );
     },
   };
 
   group.showList();
 }
+
+//=> is similar with .bind(this), the difference is .bind(this) is exclusive to the original object.
+//=> only using the outer lexical environment

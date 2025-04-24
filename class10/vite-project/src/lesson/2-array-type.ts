@@ -1,8 +1,8 @@
 {
   let fruits: string[] = ['banana', 'orange'];
   fruits.push('pinaple');
-  fruits.push(true);
-  fruits.push(0);
+  // fruits.push(true);
+  // fruits.push(0);
 
   console.log(fruits);
 }

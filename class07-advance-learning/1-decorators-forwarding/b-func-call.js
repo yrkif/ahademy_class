@@ -36,3 +36,6 @@
 }
 
 // line (**) is not calling worker.slow(x), but func(x). since func(x) is not an object, it will resulting undefined. to fix this, use .call(this,x) to use the original function (worker.slow).
+
+//.call(this, ...) is used for calling a property/method from an object
+//.call doesn't need the function to be under an object (method) --> see the exercise07

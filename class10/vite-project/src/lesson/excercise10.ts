@@ -42,7 +42,8 @@
   // 1. Apa arti tanda `?` pada parameter `author`?
   //-->optional,  means the function 'printMessage()' can run without any input in 'author' variable
   // 2. Apa arti dari tipe `void` pada fungsi ini?
-  //--> 'void' means doesn't return anything in a function. Commonly used for 'console.log' or 'return' nothing.
+  //--> 'void' means return nothing in a function. Commonly used for 'console.log' or 'return' nothing.
   // 3. Apa yang akan terjadi jika fungsi dipanggil seperti ini: `printMessage("Welcome!")`?
-  //--> onlye message that shown in the output. author will shown 'undefined'
+  //--> only message that shown in the output. author will shown 'undefined'
+  //--> Welcome! - undefined
 }

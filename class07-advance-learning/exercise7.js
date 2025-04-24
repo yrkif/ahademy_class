@@ -3,11 +3,24 @@
 //1. call()
 {
   //Buat function introduce yang menggunakan call() untuk memperkenalkan diri.
+  function introduce(name) {
+    console.log(`Hi, my name is ${this.name}`);
+  }
+
+  const person = {
+    name: 'John',
+  };
+
+  introduce.call(person);
 }
 
 //2. apply()
 {
   //Gunakan apply() untuk mengambil nilai maksimum dari sebuah array.
+  let arr = [1, 2, 3, 4, 5];
+
+  const max = Math.max.apply(null, arr);
+  console.log(max);
 }
 
 //3. bind()

@@ -12,3 +12,5 @@ function sayHi(who) {
 
 let sayHiDeffered = defer(sayHi, 2000);
 sayHiDeffered('John');
+
+//i still dont understand this concept

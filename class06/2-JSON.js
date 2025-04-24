@@ -29,7 +29,6 @@
 
   console.log(JSON.stringify(user)); // {}
 }
-ß;
 
 //2.JSON Parse - convert back string JSON to object
 {

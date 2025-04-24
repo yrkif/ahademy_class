@@ -44,7 +44,7 @@
       }
     },
     sleep() {
-      this.isSleeping = true;
+      this.isSleeping = true; //this refer to object before the dot
     },
   };
 
@@ -53,7 +53,7 @@
     __proto__: animal,
   };
 
-  rabbit.sleep();
+  rabbit.sleep(); //'this' is owned by rabbit, not animal --> just for prototype
 
   console.log(rabbit.isSleeping);
   console.log(animal.isSleeping);

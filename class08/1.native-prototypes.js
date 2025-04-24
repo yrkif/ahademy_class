@@ -65,11 +65,11 @@
   console.log(rabbit2.jumps);
 }
 
-//object 'simple'
+//object 'simple' --> quite dont understand, and no explanation from Edwin. so juts skip it
 {
   let obj = {};
 
-  let key = prompt('apa kuncinya', '__proto__');
+  let key = prompt('apa kuncinya');
   obj[key] = 'nilai tertentu';
 
   console.log(obj[key]); //prompt is used in html. the result is [object Object], not 'nilai tertentu' --> glitch why __proto__ is not used anymore

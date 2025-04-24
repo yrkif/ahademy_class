@@ -4,21 +4,21 @@
 
 {
   //===example that produce an error===
-  // let group = {
-  //   title: 'Our Group',
-  //   students: ['John', 'Pete', 'Alice'],
-  //   showList() {
-  //     this.students.forEach(function (student) {
-  //       // Error: Cannot read property 'title' of undefined
-  //       console.log(this.title + ': ' + student); (*)
-  //     });
-  //   },
-  // };
-  // group.showList();
+  let group = {
+    title: 'Our Group',
+    students: ['John', 'Pete', 'Alice'],
+    showList() {
+      this.students.forEach(function (student) {
+        // Error: Cannot read property 'title' of undefined
+        console.log(this.title + ': ' + student); //(*)
+      });
+    },
+  };
+  group.showList();
 }
 
 //line (*) makes the code error because "this" doesn't refer to an object, but function(student). this will result an output of undefined, and make the code error.
-//to fix it, "this" should refer  to the correct object (group = {...}).
+//to fix it, "this" should refer to the correct object (group = {...}).
 //how? change into arrow function
 
 {

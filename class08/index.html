@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {};
+
+      let key = prompt('apa kuncinya', '__proto__');
+      obj[key] = 'nilai tertentu';
+
+      console.log(obj[key]); //prompt is used in html. the result is [object Object], not 'nilai tertentu' --> glitch why __proto__ is not used anymore
+
+      //to resolve that bug, use new Map
+
+      let obj2 = new Map();
+
+      let key2 = prompt('apa kuncinya', '__proto__');
+      Map.set(key2, 'nilai tertentu');
+
+      console.log(obj2[key2]);
+    </script>
+  </body>
+</html>

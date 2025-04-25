@@ -7,6 +7,7 @@
     #fixWaterAmount(value) {
       if (value < 0) return 0;
       if (value > this.#waterLimit) return this.#waterLimit;
+      return value;
     }
 
     setWaterAmount(value) {

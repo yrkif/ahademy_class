@@ -28,23 +28,23 @@ function getUserData() {
 }
 
 function showDashboard() {
-  return new Promise((resolve)=>{
-    console.log('Menampilkan dashboard user')
-    setTimeout(()=>{
-      resolve('Dashboard siap ditampilkan')
-    },1000)
-  })
+  return new Promise((resolve) => {
+    console.log('Menampilkan dashboard user');
+    setTimeout(() => {
+      resolve('Dashboard siap ditampilkan');
+    }, 1000);
+  });
 }
 
-login('admin');
+login('admin')
   .then((res) => {
-    console.log(res)
-    return getUserData()
+    console.log(res);
+    return getUserData();
   })
-  .then((res)=>{
-    console.log(res)
-    return showDashboard()
+  .then((res) => {
+    console.log(res);
+    return showDashboard();
   })
-  .catch((err)=>{
-    console.log('error terjadi ditengah proses',err)
-  })
+  .catch((err) => {
+    console.log('error terjadi ditengah proses', err);
+  });

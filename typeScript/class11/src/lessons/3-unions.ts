@@ -8,19 +8,20 @@
 }
 
 {
-  type toDoComplete = {
+  type ToDoComplete = {
     status: 'Complete'; //literal type
     completedAt: Date;
   };
 
-  type toDoIncomplete = {
+  type ToDoIncomplete = {
+    //interface not support union
     status: 'Incomplete';
     reason: String;
   };
 
-  type toDoStatus = toDoComplete | toDoIncomplete;
+  type ToDoStatus = ToDoComplete | ToDoIncomplete;
 
-  const toDoStatus2: toDoStatus = {
+  const toDoStatus2: ToDoStatus = {
     status: 'Incomplete',
     reason: 'I forgot it',
   };

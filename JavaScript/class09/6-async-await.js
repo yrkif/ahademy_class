@@ -37,32 +37,32 @@
 }
 
 {
-  // function loginUser(username) {
-  //   return new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       if (username === 'admin') resolve('Login Berhasil');
-  //       else reject('Username saah');
-  //     }, 1000);
-  //   });
-  // }
-  // function ambilDataUser() {
-  //   return new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       resolve('data user lengkap');
-  //     }, 1500);
-  //   });
-  // }
-  // async function runApp() {
-  //   try {
-  //     const login = await loginUser('admin');
-  //     console.log(login);
-  //     const data = await ambilDataUser();
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log('Error, ', error);
-  //   }
-  // }
-  // runApp();
+  function loginUser(username) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (username === 'admin') resolve('Login Berhasil');
+        else reject('Username saah');
+      }, 1000);
+    });
+  }
+  function ambilDataUser() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('data user lengkap');
+      }, 1500);
+    });
+  }
+  async function runApp() {
+    try {
+      const login = await loginUser('admin');
+      console.log(login);
+      const data = await ambilDataUser();
+      console.log(data);
+    } catch (error) {
+      console.log('Error, ', error);
+    }
+  }
+  runApp();
 }
 
 {

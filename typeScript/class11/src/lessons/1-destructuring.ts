@@ -31,5 +31,12 @@
     console.log(name, debugMode, indentLevel);
   };
 
-  printNameAndAge8;
+  const printNameAndAge9: PrintNameAndAgeFunc = (
+    name,
+    { debugMode, indentLevel } = {}
+  ) => {
+    console.log(name, debugMode, indentLevel);
+  };
+
+  printNameAndAge8('wati');
 }

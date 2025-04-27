@@ -5,7 +5,7 @@ type Car = {
   wheel?: number;
   engine?: string;
   // [key:string]: string | number;
-  [key: string]: any;
+  [key: string]: any; //dynamics from backend data
 };
 
 const car: Car = {
@@ -13,7 +13,7 @@ const car: Car = {
   model: 'Camry',
   year: 2022,
   price: 1000,
-  color: red,
+  color: 'red',
 };
 
 console.log(car);

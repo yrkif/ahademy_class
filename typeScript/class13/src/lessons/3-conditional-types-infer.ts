@@ -6,7 +6,7 @@
 //example1: get element from array
 {
   type GetType<T> = T extends Array<infer U> ? U : never;
-  // infer = const, tupe data ga bisa diubah, klo ga cocok = never
+  // infer = const, type data ga bisa diubah, klo ga cocok = never
 
   type A = GetType<string[]>;
   type B = GetType<number[]>;
@@ -25,15 +25,23 @@
 
   type Fn = () => number;
   type Result = GetReturnType<Fn>; // number
+
   const result: Result = 123;
   console.log(result);
 }
 
 //example3
 {
-  type GerFirstParam<T> = T extends (arg: infer P) => any ? P : never;
+  type GetFirstParam<T> = T extends (arg: infer P) => any ? P : never;
   type Fn = (x: string) => void;
-  type Param = GerFirstParam<Fn>; // string
+  type Param = GetFirstParam<Fn>; // string
+
   const value: Param = 'example';
+
   console.log('firstParam', value);
 }
+
+//why using infer?
+// 1. to extract types from complex structures (return type, parameter type, array, promise, etc)
+// 2. to create more flexible and reusable types
+// 3. to create custom utility types from 'return type', 'parameter type', 'awaited', etc

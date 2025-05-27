@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <h1 class="text-3xl font-bold underline bg-amber-200">Hello world!</h1>
+    <div class="text-green-600 bg-black">
+      <h2>User Profile</h2>
+      <p>Tailwind memungkinkan styling lebih cepat dan konsisten</p>
+      <p>Nama Pengguna : John Doe</p>
+    </div> -->
+
+    <!-- typography -->
+    <div class="mt-2 bg-blue-400 p-10">
+      <h1
+        class="text-3xl font-light text-green-300 italic underline lowercase tracking-tight"
+      >
+        Font Light
+      </h1>
+      <h1 class="font-normal">Font Normal</h1>
+      <h1 class="font-medium">Font Medium</h1>
+      <h1 class="font-semibold">Font Semibold</h1>
+      <h1 class="font-bold">Font Bold</h1>
+    </div>
+
+    <!-- display block -->
+    <div>
+      <h3>dispay block vs inline</h3>
+      <div class="bg-red-200">div = block = full</div>
+      <span class="bg-blue-300 p-2">ini span</span>
+    </div>
+
+    <!-- flexbox -->
+    <div class="mt-12">
+      <h3 class="text-lg font-semibold text-gray-700 mb-10">flexbox layout</h3>
+      <div class="flex flex-row-reverse justify-center gap-4">
+        <div class="p-5 bg-red-600 text-white rounded-2xl">item 1</div>
+        <div class="p-5 bg-blue-600 text-white rounded-2xl">item 2</div>
+        <div class="p-5 bg-yellow-600 text-white rounded-2xl">item 3</div>
+        <div class="p-5 bg-green-600 text-white rounded-2xl">item 4</div>
+      </div>
+    </div>
+
+    <!-- grid layout -->
+    <div class="mt-12">
+      <h3 class="text-lg font-semibold text-gray-700 mb-10">grid layout</h3>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div
+          class="p-5 bg-red-600 text-white rounded-2xl flex items-center justify-center"
+        >
+          item 1
+        </div>
+        <div class="p-5 bg-blue-600 text-white text-3xl rounded-2xl">
+          item 2
+        </div>
+        <div class="p-5 bg-yellow-600 text-white rounded-2xl">item 3</div>
+        <div class="p-5 bg-green-600 text-white rounded-2xl">item 4</div>
+      </div>
+    </div>
+
+    <!-- responsive design -->
+    <div class="p-5 grid grid-cols-3">
+      <div
+        class="p-5 bg-violet-600 sm:bg-amber-200 md:bg-green-600 text-5xl flex justify-center"
+      >
+        tes2
+      </div>
+      <div class="p-5 bg-yellow-600 text-5xl self-end">tes2</div>
+    </div>
+
+    <div
+      class="p-10 text-8xl bg-black text-white sm:bg-red-600 md:bg-blue-600 lg:bg-green-600"
+    >
+      berubah warna
+    </div>
+  </body>
+</html>

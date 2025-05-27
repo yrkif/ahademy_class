@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo CSS Grid Interaktif</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="principal">
+      <h1>CSS Grid - Henry Rivardo</h1>
+
+      <div class="content-wrapper">
+        <!-- Grid Container and Controls -->
+        <div class="controls-and-grid">
+          <!-- Grid Container Properties -->
+          <section aria-labelledby="container-props">
+            <h2 id="container-props">Properti Grid Container</h2>
+
+            <div class="control">
+              <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a>
+                <span>(container)</span>
+              </h3>
+              <div class="radio" role="radiogroup" aria-label="Opsi grid template columns">
+                <input name="grid-template-columns" type="radio" class="grid-template-columns" id="R11" value="1fr-1fr-1fr" checked />
+                <label for="R11">1fr 1fr 1fr</label>
+                <input name="grid-template-columns" type="radio" class="grid-template-columns" id="R12" value="100px-1fr-1fr" />
+                <label for="R12">100px 1fr 1fr</label>
+                <input name="grid-template-columns" type="radio" class="grid-template-columns" id="R13" value="auto-200px-1fr" />
+                <label for="R13">auto 200px 1fr</label>
+              </div>
+            </div>
+
+            <div class="control">
+              <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap">grid-gap</a>
+                <span>(container)</span>
+              </h3>
+              <div class="radio" role="radiogroup" aria-label="Opsi grid gap">
+                <input name="grid-gap" type="radio" class="grid-gap" id="R21" value="10px" checked />
+                <label for="R21">10px</label>
+                <input name="grid-gap" type="radio" class="grid-gap" id="R22" value="20px" />
+                <label for="R22">20px</label>
+                <input name="grid-gap" type="radio" class="grid-gap" id="R23" value="40px" />
+                <label for="R23">40px</label>
+              </div>
+            </div>
+
+            <div class="control">
+              <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items">justify-items</a>
+                <span>(container)</span>
+              </h3>
+              <div class="radio" role="radiogroup" aria-label="Opsi justify items">
+                <input name="justify-items" type="radio" class="justify-items" id="R31" value="start" />
+                <label for="R31">start</label>
+                <input name="justify-items" type="radio" class="justify-items" id="R32" value="center" />
+                <label for="R32">center</label>
+                <input name="justify-items" type="radio" class="justify-items" id="R33" value="end" />
+                <label for="R33">end</label>
+                <input name="justify-items" type="radio" class="justify-items" id="R34" value="stretch" checked />
+                <label for="R34">stretch</label>
+              </div>
+            </div>
+
+            <div class="control">
+              <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">align-items</a>
+                <span>(container)</span>
+              </h3>
+              <div class="radio" role="radiogroup" aria-label="Opsi align items">
+                <input name="align-items" type="radio" class="align-items" id="R41" value="start" />
+                <label for="R41">start</label>
+                <input name="align-items" type="radio" class="align-items" id="R42" value="center" />
+                <label for="R42">center</label>
+                <input name="align-items" type="radio" class="align-items" id="R43" value="end" />
+                <label for="R43">end</label>
+                <input name="align-items" type="radio" class="align-items" id="R44" value="stretch" checked />
+                <label for="R44">stretch</label>
+              </div>
+            </div>
+          </section>
+
+          <!-- Grid Item Properties -->
+          <section aria-labelledby="item-props">
+            <h2 id="item-props">Properti Grid Item</h2>
+
+            <div class="control">
+              <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column">grid-column</a>
+                <span>(item)</span>
+              </h3>
+              <div class="radio" role="radiogroup" aria-label="Opsi grid column">
+                <input name="grid-column" type="radio" class="grid-column" id="R51" value="1-2" checked />
+                <label for="R51">1 / 2</label>
+                <input name="grid-column" type="radio" class="grid-column" id="R52" value="1-3" />
+                <label for="R52">1 / 3</label>
+                <input name="grid-column" type="radio" class="grid-column" id="R53" value="2-4" />
+                <label for="R53">2 / 4</label>
+              </div>
+            </div>
+
+            <div class="control">
+              <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row">grid-row</a>
+                <span>(item)</span>
+              </h3>
+              <div class="radio" role="radiogroup" aria-label="Opsi grid row">
+                <input name="grid-row" type="radio" class="grid-row" id="R61" value="1-2" checked />
+                <label for="R61">1 / 2</label>
+                <input name="grid-row" type="radio" class="grid-row" id="R62" value="1-3" />
+                <label for="R62">1 / 3</label>
+                <input name="grid-row" type="radio" class="grid-row" id="R63" value="2-4" />
+                <label for="R63">2 / 4</label>
+              </div>
+            </div>
+          </section>
+
+          <!-- Grid Container -->
+          <div class="grid-container" id="grid-demo">
+            <div class="item" id="target-item" data-color="ff6f61"><p>1</p></div>
+            <div class="item" data-color="ffcc00"><p>2</p></div>
+            <div class="item" data-color="6ab04c"><p>3</p></div>
+            <div class="item" data-color="4834d4"><p>4</p></div>
+            <div class="item" data-color="eb4d4b"><p>5</p></div>
+          </div>
+        </div>
+
+        <!-- Explanation Box -->
+        <aside class="explanation" aria-live="polite">
+          <h3>Penjelasan Properti</h3>
+          <p id="explanation-text">Pilih properti untuk melihat penjelasannya.</p>
+        </aside>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

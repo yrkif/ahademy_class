@@ -15,3 +15,8 @@
   const message: Result = 'Hello, world!';
   console.log('Return type of sayHi:', message);
 }
+
+//example2:
+{
+  type Getarray
+}

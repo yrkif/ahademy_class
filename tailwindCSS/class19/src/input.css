@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-henry: 100rem;
+
+  --text-display-2xl: 3rem;
+  --spacing: 5px;
+  --color-primary: #3490dc;
+}
+
+@layer components {
+  .btn-henry {
+    background-color: green;
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-henry:hover {
+    background-color: red;
+  }
+}

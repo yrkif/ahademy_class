@@ -44,9 +44,9 @@
       <form action="" aria-label="contact form">
         <div>
           <label
-            for=""
+            for="name"
             class="block text-sm font-medium text-gray-700 dark:text-white"
-            >nama Lengkap</label
+            >Nama Lengkap</label
           >
           <input
             type="text"
@@ -57,6 +57,31 @@
             placeholder="Nama Lengkap"
           />
           <p>harus diisi</p>
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 dark:text-white"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="peer w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Nama Lengkap"
+          />
+          <p>masukan email mu</p>
+        </div>
+
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-medium text-gray-700 dark:text-black"
+            >Pesan</label
+          >
+          <textarea name="message" id=""></textarea>
         </div>
       </form>
     </section>

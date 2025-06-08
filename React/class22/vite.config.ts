@@ -1,16 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import svgr from 'vite-plugin-svgr'; // no change here
+import svgr from 'vite-plugin-svgr';
+import tailwindcss from '@tailwindcss/vite';
 
-// 👇 this import is necessary for TS typing
-import type { PluginOption } from 'vite';
-
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     react(),
     svgr({
       include: 'src/assets/**/*.svg',
-    }) as PluginOption, // ✅ fix the error here with type assertion
+    }),
   ],
   server: {
     port: 3000,
@@ -24,8 +24,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use 'sass:math';
-          @use '@/scss/_shared.scss' as *;
+        @use 'sass:math';
+        @use '@/scss/_shared.scss' as *;
         `,
       },
     },
